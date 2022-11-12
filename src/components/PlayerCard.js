@@ -1,18 +1,11 @@
-import Dot from './Dot'
+import DotSelect from './DotSelect'
 import cat from '../assets/meow.png'
 import dog from '../assets/woof.png'
 import unicorn from '../assets/neigh.png'
+import {useState} from 'react';
 
-const cardStyle={
-    margin: "20px",
-    backgroundColor: '#E6F8FF',
-    width: '80%',
-    maxWidth: '400px',
-    height: '200px',
-    borderRadius: '40px',
-    justifyContent: 'center',
-    padding: '10px'
-}
+
+
 const pStyle = {
     fontSize: "3vh"
 
@@ -21,27 +14,56 @@ const dotsS = {
     display: "flex",
     flexDirection: "row",
     justifyContent: 'center',
-
     alignItems: 'center'
 }
 const dt={
-    padding:'10px'
+    padding:'10px',
+
 }
 
-export default function PlayerCard(){
+
+
+function setPlayer(playerNum,playerCharacter,color){
+    
+    
+    window.sessionStorage.setItem(playerNum, playerCharacter);
+    console.log(sessionStorage)
+    
+
+
+
+
+}
+
+
+export default function PlayerCard(props){
+
+    const [selected,notSelected ] = useState(false);
+    
+
+    const cardStyle={
+        margin: "10px",
+        backgroundColor: props.color,
+        width: '80%',
+        maxWidth: '400px',
+        height: '200px',
+        borderRadius: '40px',
+        justifyContent: 'center',
+        padding: '10px'
+    }
     return(
   
         <div style={cardStyle}>
-        <p style={pStyle}>Player 1</p>
+        <p style={pStyle}>Player {props.num}</p>
             <div style={dotsS}>
-                <div style={dt}>
-                    <Dot character={cat}></Dot>
+                <div id="cat"  onClick={ ()=> setPlayer(props.num,cat,props.color)}style={dt}>
+                    <DotSelect character={cat}></DotSelect>
                 </div>
-                <div style={dt}>
-                    <Dot character={dog}></Dot>
+                <div id="dog" onClick={ ()=> setPlayer(props.num,dog,props.color)} style={dt}>
+                    <DotSelect character={dog}></DotSelect>
                 </div>
-                <div style={dt}>
-                    <Dot character={unicorn}></Dot>
+                <div id="unicorn" onClick={ ()=> setPlayer(props.num,unicorn,props.color)} style={dt}>
+                    <DotSelect character={unicorn}></DotSelect>
                 </div>
             </div>
             
