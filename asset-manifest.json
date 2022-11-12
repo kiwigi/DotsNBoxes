@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/DotsNBoxes/static/css/main.757ca43f.css",
+    "main.js": "/DotsNBoxes/static/js/main.515f9275.js",
+    "static/media/woof.png": "/DotsNBoxes/static/media/woof.569bae0894f3e9b2af13.png",
+    "static/media/meow.png": "/DotsNBoxes/static/media/meow.00665f75f3e32620bbea.png",
+    "static/media/neigh.png": "/DotsNBoxes/static/media/neigh.d225ec8ff0c38d518a22.png",
+    "index.html": "/DotsNBoxes/index.html",
+    "main.757ca43f.css.map": "/DotsNBoxes/static/css/main.757ca43f.css.map",
+    "main.515f9275.js.map": "/DotsNBoxes/static/js/main.515f9275.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.757ca43f.css",
+    "static/js/main.515f9275.js"
+  ]
+}
